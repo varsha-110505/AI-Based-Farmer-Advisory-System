@@ -1,0 +1,470 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  margin: 0;
+  min-height: 100%;
+}
+
+/* PAGE*/
+
+.fertilizer-page {
+  min-height: 100vh;
+  display: flow-root;
+
+  background:
+    linear-gradient(
+      rgba(25, 55, 23, 0.48),
+      rgba(25, 55, 23, 0.58)
+    ),
+    url("/Disease_Detection-bg.jpg");
+
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+
+  color: #20351f;
+}
+
+/* HEADER*/
+
+.fertilizer-header {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+
+  background: rgba(255, 255, 255, 0.93);
+  backdrop-filter: blur(12px);
+
+  padding: 20px 50px;
+
+  border-bottom: 1px solid rgba(77, 139, 77, 0.12);
+
+  box-shadow:
+    0 5px 22px rgba(30, 70, 28, 0.08);
+}
+
+.fertilizer-header h1 {
+  margin: 0 0 8px;
+
+  color: #234d20;
+
+  font-size: 29px;
+  font-weight: 800;
+
+  letter-spacing: -0.5px;
+}
+
+.fertilizer-header p {
+  margin: 0;
+
+  color: #687467;
+
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+/* BACK BUTTON*/
+
+.back-button {
+  border: none;
+  background: transparent;
+
+  color: #4d8b4d;
+
+  font-size: 15px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  padding: 0;
+  margin-bottom: 12px;
+
+  transition:
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.back-button:hover {
+  color: #356a35;
+  transform: translateX(-2px);
+}
+
+/* CONTENT*/
+
+.fertilizer-content {
+  width: min(950px, calc(100% - 40px));
+
+  margin: 35px auto 50px;
+}
+
+/* CARDS*/
+
+.fertilizer-card,
+.fertilizer-result {
+  background: rgba(255, 255, 255, 0.95);
+
+  padding: 32px;
+
+  border-radius: 22px;
+
+  border: 1px solid rgba(255, 255, 255, 0.85);
+
+  box-shadow:
+    0 18px 45px rgba(26, 57, 25, 0.14);
+
+  backdrop-filter: blur(10px);
+
+  margin-bottom: 22px;
+}
+
+/* SELECT CARD*/
+
+.fertilizer-card {
+  text-align: center;
+}
+
+.fertilizer-icon {
+  width: 78px;
+  height: 78px;
+
+  margin: 0 auto 18px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 22px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #eef8eb,
+      #dfefdc
+    );
+
+  font-size: 44px;
+
+  box-shadow:
+    inset 0 0 0 1px rgba(77, 139, 77, 0.08);
+}
+
+.fertilizer-card h2 {
+  margin: 0 0 10px;
+
+  color: #234d20;
+
+  font-size: 25px;
+  font-weight: 800;
+}
+
+.fertilizer-card p {
+  max-width: 650px;
+
+  margin: 0 auto 25px;
+
+  color: #6b7868;
+
+  line-height: 1.65;
+
+  font-size: 15px;
+}
+
+/* SELECT*/
+
+.fertilizer-card select {
+  width: 100%;
+
+  padding: 14px 16px;
+
+  border: 1px solid #d8e2d5;
+
+  border-radius: 11px;
+
+  font-size: 15px;
+
+  background: #ffffff;
+
+  color: #2d392c;
+
+  outline: none;
+
+  cursor: pointer;
+
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.fertilizer-card select:hover {
+  border-color: #a9c6a5;
+}
+
+.fertilizer-card select:focus {
+  border-color: #4d8b4d;
+
+  box-shadow:
+    0 0 0 3px rgba(77, 139, 77, 0.1);
+}
+
+/* BUTTONS*/
+
+.fertilizer-button,
+.fertilizer-again-button {
+  border: none;
+
+  border-radius: 11px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #4d8b4d,
+      #417b41
+    );
+
+  color: white;
+
+  padding: 14px 24px;
+
+  font-size: 15px;
+  font-weight: 750;
+
+  cursor: pointer;
+
+  margin-top: 20px;
+
+  box-shadow:
+    0 8px 18px rgba(65, 123, 65, 0.18);
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    background 0.2s ease;
+}
+
+.fertilizer-button:hover,
+.fertilizer-again-button:hover {
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 12px 24px rgba(65, 123, 65, 0.24);
+
+  background:
+    linear-gradient(
+      135deg,
+      #579757,
+      #467f46
+    );
+}
+
+.fertilizer-button:active,
+.fertilizer-again-button:active {
+  transform: translateY(0);
+}
+
+.fertilizer-button:disabled {
+  opacity: 0.5;
+
+  cursor: not-allowed;
+
+  transform: none;
+
+  box-shadow: none;
+}
+
+/* ERROR */
+
+.fertilizer-error {
+  margin-top: 15px;
+
+  padding: 13px 15px;
+
+  border-radius: 10px;
+
+  background: #fff0f0;
+
+  border: 1px solid #f0d2d2;
+
+  color: #c62828;
+
+  text-align: left;
+
+  box-shadow:
+    0 5px 15px rgba(198, 40, 40, 0.05);
+}
+
+/* RESULT TITLE */
+
+.fertilizer-result-title {
+  font-size: 23px;
+  font-weight: 800;
+
+  color: #234d20;
+
+  margin-bottom: 22px;
+}
+
+/* RESULT CONTENT */
+
+.fertilizer-result-content {
+  color: #40503e;
+
+  line-height: 1.75;
+
+  font-size: 15px;
+}
+
+.fertilizer-result-content h1,
+.fertilizer-result-content h2,
+.fertilizer-result-content h3 {
+  color: #234d20;
+
+  margin-top: 22px;
+  margin-bottom: 9px;
+
+  line-height: 1.35;
+}
+
+.fertilizer-result-content h1:first-child,
+.fertilizer-result-content h2:first-child,
+.fertilizer-result-content h3:first-child {
+  margin-top: 0;
+}
+
+.fertilizer-result-content p {
+  margin: 9px 0 15px;
+}
+
+.fertilizer-result-content ul,
+.fertilizer-result-content ol {
+  margin: 9px 0 17px 22px;
+
+  padding: 0;
+}
+
+.fertilizer-result-content li {
+  margin-bottom: 8px;
+}
+
+.fertilizer-result-content li::marker {
+  color: #4d8b4d;
+}
+
+.fertilizer-result-content strong {
+  color: #234d20;
+
+  font-weight: 750;
+}
+
+.fertilizer-result-content em {
+  color: #596655;
+}
+
+/* RESULT SECTION DIVIDERS*/
+
+.fertilizer-result-content h2 {
+  padding-bottom: 7px;
+
+  border-bottom: 1px solid #e2ece0;
+}
+
+/* LOADING CARD*/
+
+.loading-card {
+  text-align: center;
+}
+
+.loading-card h3 {
+  color: #234d20;
+
+  font-size: 20px;
+
+  margin-bottom: 8px;
+}
+
+.loading-card p {
+  color: #687467;
+
+  line-height: 1.6;
+}
+
+.loading-card .fertilizer-icon {
+  animation: fertilizerPulse 1.4s ease-in-out infinite;
+}
+
+@keyframes fertilizerPulse {
+  0%,
+  100% {
+    transform: scale(1);
+    opacity: 0.75;
+  }
+
+  50% {
+    transform: scale(1.06);
+    opacity: 1;
+  }
+}
+
+/*MOBILE */
+
+@media (max-width: 700px) {
+  .fertilizer-header {
+    position: static;
+
+    padding: 18px 20px;
+  }
+
+  .fertilizer-header h1 {
+    font-size: 24px;
+  }
+
+  .fertilizer-header p {
+    font-size: 14px;
+  }
+
+  .fertilizer-content {
+    width: calc(100% - 24px);
+
+    margin: 20px auto 30px;
+  }
+
+  .fertilizer-card,
+  .fertilizer-result {
+    padding: 23px 18px;
+
+    border-radius: 18px;
+  }
+
+  .fertilizer-icon {
+    width: 68px;
+    height: 68px;
+
+    font-size: 38px;
+
+    border-radius: 18px;
+  }
+
+  .fertilizer-card h2 {
+    font-size: 21px;
+  }
+
+  .fertilizer-card p {
+    font-size: 14px;
+  }
+
+  .fertilizer-result-title {
+    font-size: 20px;
+  }
+
+  .fertilizer-result-content {
+    font-size: 14px;
+  }
+
+  .fertilizer-button,
+  .fertilizer-again-button {
+    width: 100%;
+  }
+}

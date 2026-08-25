@@ -1,0 +1,142 @@
+* {
+  box-sizing: border-box;
+}
+
+.login-page {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background:
+    linear-gradient(
+      rgba(30, 55, 25, 0.35),
+      rgba(30, 55, 25, 0.45)
+    ),
+    url("/dashboard-bg.jpg");
+
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+
+  padding: 20px;
+}
+
+.login-card {
+  width: 100%;
+  max-width: 430px;
+  background: rgb(237, 237, 237);
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.08);
+}
+
+.login-logo {
+  text-align: center;
+  font-size: 48px;
+  margin-bottom: 10px;
+}
+
+.login-card h1 {
+  text-align: center;
+  margin: 0;
+  font-size: 30px;
+}
+
+.login-subtitle {
+  text-align: center;
+  color: #666;
+  margin: 10px 0 30px;
+  line-height: 1.5;
+}
+
+.login-card form {
+  display: flex;
+  flex-direction: column;
+}
+
+.login-card label {
+  margin-bottom: 7px;
+  font-weight: 600;
+}
+
+.login-card input {
+  padding: 13px;
+  margin-bottom: 18px;
+  border: 1px solid #d5d5d5;
+  border-radius: 8px;
+  font-size: 15px;
+  outline: none;
+}
+
+.login-card input:focus {
+  border-color: #4d8b4d;
+}
+
+.login-card button {
+  padding: 14px;
+  border: none;
+  border-radius: 8px;
+  background: #4d8b4d;
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.login-card button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.login-error {
+  color: #c62828;
+  background: #ffebee;
+  padding: 10px;
+  border-radius: 7px;
+  margin-bottom: 15px;
+  font-size: 14px;
+}
+
+.register-text {
+  text-align: center;
+  margin-top: 25px;
+  color: #666;
+}
+
+.register-text span {
+  color: #4d8b4d;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.register-text span:hover {
+  text-decoration: underline;
+}
+
+.login-language {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 15px;
+}
+
+.login-language label {
+  font-size: 13px;
+  color: #666;
+  font-weight: 600;
+}
+
+.login-language select {
+  padding: 7px 9px;
+  border: 1px solid #ddd;
+  border-radius: 7px;
+  background: white;
+  font-size: 13px;
+  outline: none;
+}
+
+.login-language select:focus {
+  border-color: #4d8b4d;
+}

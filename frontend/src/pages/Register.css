@@ -1,0 +1,208 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  margin: 0;
+  min-height: 100%;
+}
+
+.register-page {
+  width: 100%;
+  height: 100dvh;
+  min-height: 100dvh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background:
+    linear-gradient(
+      rgba(30, 55, 25, 0.35),
+      rgba(30, 55, 25, 0.45)
+    ),
+    url("/dashboard-bg.jpg");
+
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+
+  padding: 20px;
+  overflow: hidden;
+}
+
+.register-card {
+  width: 100%;
+  max-width: 500px;
+  background: white;
+  padding: 35px;
+  border-radius: 18px;
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.08);
+}
+
+.register-language {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 15px;
+}
+
+.register-language label {
+  font-size: 13px;
+  color: #666;
+  font-weight: 600;
+}
+
+.register-language select {
+  padding: 7px 9px;
+  border: 1px solid #ddd;
+  border-radius: 7px;
+  background: white;
+  outline: none;
+}
+
+.register-logo {
+  text-align: center;
+  font-size: 48px;
+  margin-bottom: 10px;
+}
+
+.register-card h1 {
+  text-align: center;
+  margin-bottom: 8px;
+  color: #234d20;
+}
+
+.register-subtitle {
+  text-align: center;
+  color: #666;
+  margin-bottom: 25px;
+}
+
+.register-card form {
+  display: flex;
+  flex-direction: column;
+}
+
+.register-card label {
+  margin-bottom: 7px;
+  font-weight: 600;
+  color: #333;
+}
+
+.register-card input {
+  padding: 13px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 15px;
+  margin-bottom: 16px;
+  outline: none;
+}
+
+.register-card input:focus {
+  border-color: #4d8b4d;
+}
+
+.register-card form button,
+.register-card > button {
+  border: none;
+  border-radius: 9px;
+  background: #4d8b4d;
+  color: white;
+  padding: 14px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 5px;
+}
+
+.register-card button:hover {
+  background: #3d7337;
+}
+
+.register-card button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.register-error {
+  margin-bottom: 15px;
+  padding: 12px;
+  border-radius: 8px;
+  background: #ffebee;
+  color: #c62828;
+}
+
+.register-success-text {
+  text-align: center;
+  color: #666;
+}
+
+.farmer-id-box {
+  margin: 25px 0;
+  padding: 20px;
+  background: #edf5ed;
+  border-radius: 12px;
+  text-align: center;
+}
+
+.farmer-id-box span {
+  display: block;
+  color: #666;
+  margin-bottom: 8px;
+}
+
+.farmer-id-box strong {
+  font-size: 32px;
+  color: #2f6d2f;
+  letter-spacing: 2px;
+}
+
+.register-important {
+  text-align: center;
+  color: #777;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+.back-login-text {
+  text-align: center;
+  color: #666;
+  margin-top: 20px;
+}
+
+.back-login-text span {
+  color: #4d8b4d;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.back-login-text span:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 600px) {
+  .register-card {
+    padding: 25px 20px;
+  }
+
+  .farmer-id-box strong {
+    font-size: 26px;
+  }
+}
+
+@media (max-width: 600px) {
+  .register-page {
+    height: auto;
+    min-height: 100dvh;
+    overflow-y: auto;
+    padding: 20px 12px;
+  }
+
+  .register-card {
+    padding: 25px 20px;
+  }
+}
