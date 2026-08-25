@@ -1,51 +1,37 @@
-# 🌱 AI-Based Farmer Advisory System
+# AI-Based Farmer Advisory System
 
 A multilingual AI-powered web application that provides personalized agricultural guidance through conversational AI, crop recommendations, fertilizer advice, weather insights, plant disease detection, and voice interaction.
 
-## 🚀 Features
+## Features
 
-- 🤖 **AI Farmer Advisor** — Personalized farming assistance using farmer profile, location, weather, and conversation context.
-- 🌐 **Multilingual Support** — English, Kannada, Hindi, and Tamil.
-- 🎤 **Voice Input** — Ask farming questions using speech.
-- 🔊 **Multilingual Voice Output** — Listen to AI responses using text-to-speech.
-- 🌾 **Crop Recommendations** — Suggests suitable crops based on location and current weather.
-- 🧪 **Fertilizer Advice** — Provides simple, crop-specific fertilizer guidance.
-- 🔬 **Plant Disease Detection** — CNN-based image classification with confidence scores and AI-generated advice.
-- 🌦️ **Weather Integration** — Location-based weather information for personalized recommendations.
-- 👤 **Farmer Authentication** — Registration, login, generated Farmer IDs, and personalized farmer profiles.
+- **AI Farmer Advisor** — Provides personalized farming assistance using farmer profile, location, weather, and conversation context.
+- **Multilingual Support** — Supports English, Kannada, Hindi, and Tamil.
+- **Voice Interaction** — Supports speech input and multilingual text-to-speech output.
+- **Crop Recommendations** — Suggests suitable crops based on location and current weather conditions.
+- **Fertilizer Advice** — Provides simple, crop-specific fertilizer guidance.
+- **Plant Disease Detection** — Uses CNN-based image classification with confidence scores and AI-generated treatment advice.
+- **Weather Integration** — Uses location-based weather information for personalized recommendations.
+- **Farmer Authentication** — Supports registration, login, generated Farmer IDs, and personalized farmer profiles.
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 ### Frontend
 
-- React.js
-- JavaScript
-- CSS
-- React Markdown
-- Vite
+React.js, JavaScript, CSS, Vite, React Markdown
 
 ### Backend
 
-- Python
-- FastAPI
-- REST APIs
-- MongoDB
+Python, FastAPI, REST APIs, MongoDB
 
-### AI / Machine Learning
+### AI and Machine Learning
 
-- TensorFlow / Keras
-- scikit-learn
-- CNN-based image classification
-- Groq LLM API
-- gTTS
+TensorFlow/Keras, scikit-learn, CNN-based image classification, Groq LLM API, gTTS
 
 ### Tools
 
-- Git
-- GitHub
-- VS Code
+Git, GitHub, VS Code
 
-## 🏗️ Project Structure
+## Project Structure
 
 ```text
 AI-Based-Farmer-Advisory-System/
